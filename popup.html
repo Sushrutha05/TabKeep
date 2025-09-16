@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>TabVault</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      width: 360px;
+      padding: 15px;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    h3 {
+      text-align: center;
+      color: #0078d7;
+      margin-bottom: 10px;
+    }
+
+    .input-container {
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    #sessionNameInput {
+      flex: 1;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    button {
+      margin-left: 5px;
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.2s;
+      background: #0078d7;
+      color: white;
+    }
+
+    button:hover {
+      background: #005a9e;
+    }
+
+    #notification {
+      font-size: 13px;
+      color: #e74c3c;
+      margin: 5px 0 10px 0;
+      min-height: 18px;
+    }
+
+    .card {
+      background: white;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h4 {
+      margin-top: 0;
+      color: #0078d7;
+    }
+
+    #currentTabsPreview,
+    #message {
+      max-height: 200px;
+      overflow-y: auto;
+      font-size: 13px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    li span.session-name {
+      cursor: pointer;
+      color: #0078d7;
+      font-weight: 500;
+    }
+
+    li span.session-name:hover {
+      text-decoration: underline;
+    }
+
+    li button {
+      flex: unset;
+      background: transparent;
+      font-size: 16px;
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+
+    li button.preview {
+      color: #0078d7;
+    }
+
+    li button.preview:hover {
+      background: #0078d7;
+      color: white;
+    }
+
+    li button.delete {
+      color: #e74c3c;
+    }
+
+    li button.delete:hover {
+      background: #e74c3c;
+      color: white;
+    }
+
+    .preview-div {
+      margin-top: 5px;
+      font-size: 12px;
+      color: #333;
+      display: none;
+      max-height: 150px;
+      overflow-y: auto;
+      padding-left: 5px;
+      border-left: 2px solid #0078d7;
+    }
+
+    .showTabs {
+      margin-bottom: 5px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h3>TabVault</h3>
+
+  <div class="input-container">
+    <input type="text" id="sessionNameInput" placeholder="Enter session name">
+    <button id="storeTabs">Store Tabs</button>
+    <button id="refreshPreview">Refresh Preview</button>
+  </div>
+
+  <div id="notification"></div>
+
+  <div class="card">
+    <h4>Current Tabs Preview</h4>
+    <div id="currentTabsPreview"></div>
+  </div>
+
+  <div class="card">
+    <h4>Saved Sessions</h4>
+    <button id="showTabs">Show Sessions</button>
+    <div id="message"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
