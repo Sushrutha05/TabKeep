@@ -18,6 +18,24 @@ function showNotification(message, color = 'red', duration = 3000) {
   }, duration);
 }
 
+// Check sync storage usage
+function checkSyncUsage() {
+  chrome.storage.sync.getBytesInUse(null, (bytesInUse) => {
+    const quota = chrome.storage.sync.QUOTA_BYTES; // usually 102400 (100KB)
+    const percent = ((bytesInUse / quota) * 100).toFixed(2);
+
+    console.log(`Storage used: ${bytesInUse} / ${quota} bytes (${percent}%)`);
+
+    if (percent > 90) {
+      showNotification(
+        `Warning: Sync storage is almost full (${percent}%). Consider deleting old sessions.`,
+        'orange',
+        6000
+      );
+    }
+  });
+}
+
 // Preview current tabs
 function previewCurrentTabs() {
   chrome.tabs.query({ currentWindow: true }, (tabs) => {
@@ -41,6 +59,9 @@ refreshPreviewBtn.addEventListener('click', previewCurrentTabs);
 // Update preview on popup open
 previewCurrentTabs();
 
+
+
+
 // Save tabs
 document.getElementById('storeTabs').addEventListener("click", () => {
   clearNotification();
@@ -57,7 +78,7 @@ document.getElementById('storeTabs').addEventListener("click", () => {
       return;
     }
 
-    chrome.storage.local.get("savedSets", (result) => {
+    chrome.storage.sync.get("savedSets", (result) => { 
       let savedSets = result.savedSets || {};
 
       if (savedSets.hasOwnProperty(sessionName)) {
@@ -67,9 +88,10 @@ document.getElementById('storeTabs').addEventListener("click", () => {
 
       savedSets[sessionName] = tabs.map(tab => ({ title: tab.title, url: tab.url }));
 
-      chrome.storage.local.set({ savedSets }, () => {
+      chrome.storage.sync.set({ savedSets }, () => { 
         showNotification(`Saved "${sessionName}" with ${tabs.length} tabs.`, 'green');
         sessionInput.value = "";
+        checkSyncUsage();
       });
     });
   });
@@ -79,8 +101,9 @@ document.getElementById('storeTabs').addEventListener("click", () => {
 document.getElementById('showTabs').addEventListener("click", () => {
   clearNotification();
   messageDiv.innerHTML = "";
+  checkSyncUsage();
 
-  chrome.storage.local.get("savedSets", (result) => {
+  chrome.storage.sync.get("savedSets", (result) => {
     let savedSets = result.savedSets || {};
     if (Object.keys(savedSets).length === 0) {
       messageDiv.textContent = "No sessions saved yet.";
@@ -145,7 +168,7 @@ document.getElementById('showTabs').addEventListener("click", () => {
         yesBtn.style.marginLeft = "5px";
         yesBtn.addEventListener("click", () => {
           delete savedSets[sessionName];
-          chrome.storage.local.set({ savedSets }, () => {
+          chrome.storage.sync.set({ savedSets }, () => {
             li.remove();
           });
         });
