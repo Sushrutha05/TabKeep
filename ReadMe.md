@@ -22,7 +22,7 @@ Then I noticed a friend’s workflow: separate desktops for **projects, learning
 
 💡 That’s when I thought: *“Why can’t browsers work like that too?”*
 
-**TabKeep** was born — a lightweight Microsoft Edge extension that lets you **vault all your tabs into named sessions, restore them instantly, and sync them across devices**.
+**TabKeep** was born — a lightweight Microsoft Edge extension that lets you **keep all your tabs into named sessions, restore them instantly, and sync them across devices**.
 
 Stop losing focus. Stop losing tabs. Bring order to your browser, wherever you are.
 
@@ -40,8 +40,7 @@ Stop losing focus. Stop losing tabs. Bring order to your browser, wherever you a
 ---
 
 ## 🎥 Demo
-
-![TabKeep Demo](https://drive.google.com/file/d/1BZa4du8V7NUo8jxsY_yQFK3FPye7lVdz/view)  
+[TabKeep Demo](https://drive.google.com/file/d/1BZa4du8V7NUo8jxsY_yQFK3FPye7lVdz/view)  
 *Watch chaos turn into order in seconds!*
 
 ---
@@ -82,12 +81,12 @@ All tabs reopen in the same order you saved them — anywhere you’re logged in
 
 ## 🌟 Credits
 
-Built by **[Sushrutha]**, CSE Student & Developer.  
+Built by **Sushrutha**, CSE Student & Developer.  
 Inspired by friends juggling multiple desktops and endless tabs — wanted a smarter way to stay organized.
 
 ---
 
 ## 📍 Links
 
-- Portfolio / Project Page: [Your Portfolio Link]  
+- Portfolio / Project Page: [Portfolio Link](https://sites.google.com/view/sushrutha/projects/tabkeep)
 - Microsoft Edge Add-ons: [Install TabKeep](https://microsoftedge.microsoft.com/addons/detail/tabvault/baolpoecficghlmepafnkdoaafpdlnei)
