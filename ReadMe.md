@@ -1,57 +1,74 @@
-# TabVault 🗂️
+# TabKeep 🏂
 
-**Organize, Save, and Restore Your Browser Tabs Instantly**  
+**Turn Browser Chaos into Calm — Save, Organize, and Restore Your Tabs Across Devices**
 
 ---
 
 ## 🚀 About
 
-Tired of losing track of dozens of open browser tabs?  
-**TabVault** is a **Microsoft Edge extension** that lets you save all your open tabs into organized “sessions” and restore them anytime — with **one click**.  
-Perfect for students, developers, researchers, or anyone juggling multiple online tasks.  
+I used to tell myself: *“I’ll just open the browser for 5 minutes of work.”*
+
+But 5 minutes became 30… 30 became an hour… and before I knew it, I was staring at **37 tabs** competing for my attention:
+
+✉️ Gmail pinged with unread emails  
+🔨 GitHub project I promised myself I’d finish later  
+🗑 Notion page with research notes I swore I’d check quickly  
+🔨 Reddit threads I “just wanted to peek at”  
+🎥 YouTube whispered: “one more tutorial won’t hurt”
+
+It felt productive, but my focus had quietly slipped away. Bookmarks didn’t save me either — hundreds of “check later” links piling up.
+
+Then I noticed a friend’s workflow: separate desktops for **projects, learning, personal browsing** — neat, organized, and stress-free.
+
+💡 That’s when I thought: *“Why can’t browsers work like that too?”*
+
+**TabKeep** was born — a lightweight Microsoft Edge extension that lets you **vault all your tabs into named sessions, restore them instantly, and sync them across devices**.
+
+Stop losing focus. Stop losing tabs. Bring order to your browser, wherever you are.
 
 ---
 
 ## 💡 Features
 
-- **One-Click Save:** Save all currently open tabs as a session instantly.  
-- **Instant Restore:** Restore your saved sessions whenever you want.  
-- **Organized Workflow:** Keep research, projects, learning, and personal browsing separate and accessible.  
-- **Stress-Free Browsing:** Say goodbye to bookmark clutter and mental overload.  
-- **Lightweight & Fast:** Minimal UI, optimized for speed.  
+- 📞 **Save All Tabs:** Save all currently open tabs into a named session instantly.  
+- 🔄 **Restore Instantly:** Pick up where you left off — on the same device or any other synced device.  
+- 🗑 **Session Preview:** Check the tabs in a session before saving or restoring.  
+- 🧩 **Manage Sessions:** Delete unwanted sessions to keep your vault clean.  
+- ⚡ **Fast & Minimal UI:** No clutter, no distractions — optimized for speed.  
+- 🔒 **Secure Sync:** Sessions are synced across devices while keeping your data safe.
 
 ---
 
-## 🎬 Demo
+## 🎥 Demo
 
-![TabVault Demo](link-to-your-gif-or-video)  
-*Watch chaos turn into order in seconds!*  
+![TabKeep Demo](https://drive.google.com/file/d/1BZa4du8V7NUo8jxsY_yQFK3FPye7lVdz/view)  
+*Watch chaos turn into order in seconds!*
 
 ---
 
 ## ⚡ Installation
 
 ### **Option 1: Edge Add-ons Store**
-- Install TabVault directly from the Microsoft Edge Add-ons Store (link when live).  
+- Install **TabKeep** directly from the Microsoft Edge Add-ons Store: [Install TabKeep](https://microsoftedge.microsoft.com/addons/detail/tabvault/baolpoecficghlmepafnkdoaafpdlnei)
 
 ### **Option 2: Manual / Developer Mode**
 1. Download or clone this repository.  
 2. Open Microsoft Edge → `edge://extensions`  
 3. Enable **Developer mode**.  
 4. Click **Load unpacked** → select the folder containing the extension.  
-5. Click the TabVault icon in the toolbar to start saving and restoring tabs!  
+5. Click the TabKeep icon in the toolbar to start saving and restoring tabs!
 
 ---
 
-## 📝 How to Use
+## 📖 How to Use
 
 1. Open the tabs you want to save.  
-2. Click the TabVault icon in the toolbar.  
-3. Enter a session name and click **Save**.  
+2. Click the TabKeep icon in the toolbar.  
+3. Enter a **session name** and click **Save**.  
 4. Close tabs or Edge.  
-5. Later, click the TabVault icon → select the session → **Restore**.  
+5. Later, click the TabKeep icon → select the session → **Restore**.
 
-All tabs reopen in the same order you saved them.  
+All tabs reopen in the same order you saved them — anywhere you’re logged in.
 
 ---
 
@@ -59,18 +76,18 @@ All tabs reopen in the same order you saved them.
 
 - **Languages:** JavaScript, HTML, CSS  
 - **APIs:** Microsoft Edge Extension APIs (`tabs`, `storage`)  
-- **Tools:** Visual Studio Code, Edge Developer Tools  
+- **Tools:** Visual Studio Code, Edge Developer Tools
 
 ---
 
 ## 🌟 Credits
 
-Built by **[Your Name]**, CSE Student & Developer.  
-Inspired by friends juggling multiple desktops and endless tabs — wanted a smarter way to stay organized.  
+Built by **[Sushrutha]**, CSE Student & Developer.  
+Inspired by friends juggling multiple desktops and endless tabs — wanted a smarter way to stay organized.
 
 ---
 
-## 📌 Links
+## 📍 Links
 
 - Portfolio / Project Page: [Your Portfolio Link]  
-- Microsoft Edge Add-ons (coming soon)
+- Microsoft Edge Add-ons: [Install TabKeep](https://microsoftedge.microsoft.com/addons/detail/tabvault/baolpoecficghlmepafnkdoaafpdlnei)
